@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+
+<h1>Customer Details</h1>
+
+
+<form class="addCustomerForm" #updateCustomerForm="ngForm" >
+
+    <input required ngModel #firstName="ngModel" [(ngModel)]="customer.firstName" type="text" name="firstName" placeholder="First Name">
+    <p *ngIf="firstName.errors?.['required']">* First name is required</p>
+    <input required ngModel #lastName="ngModel" [(ngModel)]="customer.lastName" type="text" name="lastName" placeholder="Last Name">
+    <input required ngModel #city="ngModel" [(ngModel)]="customer.city" type="text" name="city" placeholder="City">
+
+    <input required minlength="3"
+    ngModel #email="ngModel" [(ngModel)]="customer.email" type="email" name="email" placeholder="Email">
+    <p *ngIf="email.errors?.['required']">The email is required</p>
+    <p>Registered by {{customer.employee?.username}}</p>
+    <button (click)="updateCustomer()" [disabled]="!updateCustomerForm.valid">Update</button>
+</form>
+
+<div class="errors">
+    <p>{{errorCode}} {{errorMessage}}</p>
+</div>
+<app-footer></app-footer>

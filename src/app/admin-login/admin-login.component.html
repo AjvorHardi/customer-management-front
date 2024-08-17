@@ -1,0 +1,15 @@
+<div class="cont">
+    <form class="loginForm" #loginForm="ngForm" >
+        <input required minlength="3"
+        ngModel [(ngModel)]="employee.username" #email="ngModel" type="email" name="email" placeholder="Email">
+        <input required ngModel [(ngModel)]="employee.password" #password="ngModel" type="password" name="password" placeholder="Password">
+        <button (click)="login()" [disabled]="!loginForm.valid">Log In</button>
+    </form>
+
+
+    <div class="errors">
+        <p>{{errorCode}}</p>
+        <p>{{errorMessage}}</p>
+    </div>
+</div>
+<app-footer></app-footer>

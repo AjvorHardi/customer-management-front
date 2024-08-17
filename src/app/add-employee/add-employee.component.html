@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<div class="main-add">
+<div class="adding">
+<h1>Add New Employee</h1>
+
+
+<form class="addEmployeeForm" #addEmployeeForm="ngForm" >
+
+    <input required ngModel #username="ngModel" [(ngModel)]="employee.username" type="text" name="username" placeholder="Username">
+    <p [style.visibility]="username.errors?.['required'] ? 'visible' : 'hidden'">* Username is required</p>
+
+    <input required ngModel #password="ngModel" [(ngModel)]="employee.password" type="text" name="password" placeholder="Password">
+    <p [style.visibility]="password.errors?.['required'] ? 'visible' : 'hidden'">* Password is required</p>
+
+    <button (click)="addEmployee()" [disabled]="!addEmployeeForm.valid">Add</button>
+</form>
+
+
+
+<div class="errors">
+    <p>{{errorCode}} {{errorMessage}}</p>
+</div>
+</div>
+</div>

@@ -1,0 +1,25 @@
+
+<nav>
+    <ul>
+        <div class="links">
+        <li>
+            <a routerLink = "/customers">Customers</a>
+        </li>
+        <li>
+            <a routerLink = "/add-customer">Add a new Customer</a>
+        </li>
+        </div>
+        <div>
+        <li class="links">
+            <a *ngIf="currentEmployee.role == 'admin'" routerLink = "/employees">Employees</a>
+        </li>
+        <li>
+            <a *ngIf="currentEmployee.role == 'admin'" routerLink = "/add-employee">Add a new Employee</a>
+        </li>
+    </div>
+    </ul>
+    <div class="name">
+        <button (click)="logout()" >Log Out</button>
+        <p>Hi, {{currentEmployee.username}} </p>
+    </div>
+</nav>

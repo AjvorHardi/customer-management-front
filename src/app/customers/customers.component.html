@@ -1,0 +1,36 @@
+
+<app-navbar></app-navbar>
+<div class="main">
+    <div class="search">
+        <form (ngSubmit)="searchCustomers()">
+            <input placeholder="Search Customers" name="searchTerm" [(ngModel)]="searchTerm" (keyup.enter)="searchCustomers()" />
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <table>
+        <thead>
+            <th>ID</th>
+            <th><a role="button" (click)="sortFirst()">First Name</a></th>
+            <th><a role="button" (click)="sortLast()">Last Name</a></th>
+            <th><a role="button" (click)="sortCity()">City</a></th>
+            <th><a role="button" (click)="sortEmail()">Email</a></th>
+        </thead>
+
+        <tbody>
+            <tr class = "customer" *ngFor="let customer of customers">
+                <td>{{customer.id}}</td>
+                <td>{{customer.firstName}}</td>
+                <td>{{customer.lastName}}</td>
+                <td>{{customer.city}}</td>
+                <td>{{customer.email}}</td>
+                <div class="btns">
+                    <button (click)="editCustomer(customer.id)" >Edit</button>
+                    <button (click)="deleteCustomer(customer.id)" >Delete</button>
+                </div>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+<!-- <a role="button" (click)="getAllYourCustomers()">Your Customers</a> -->
+<app-footer></app-footer>

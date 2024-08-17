@@ -1,0 +1,126 @@
+th a {
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.search {
+    margin: 15px;
+}
+.search form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search form input {
+    flex: 1;
+}
+.search form button {
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../assets/IMG_6720.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 85vh;
+}
+
+
+table {
+    width: 75%;
+    text-align: center;
+    background-color: rgba(241, 196, 15, 0.7);
+    padding: 15px;
+}
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center; */
+
+
+
+
+input {
+    width: 400px;
+    margin: 10px;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.btns button {
+    padding: 0 10px;
+}
+
+
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+
+table tr {
+    display: flex;
+    justify-content: space-between;
+}
+}
+
+
+@media (max-width: 768px) {
+    .main table {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 95%;
+        padding: 1px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .main table thead {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .main table tbody tr td:nth-child(4),
+    .main table tbody tr td:nth-child(5)
+    {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .main table tbody tr button
+    {
+        justify-self: flex-end;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .search form input {
+        width: 250px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    table button {
+        font-size: 0.7rem;
+        margin: 0 5px;
+        padding: 1px;
+    }
+}

@@ -1,0 +1,87 @@
+<app-navbar></app-navbar>
+<div class="main-add">
+<div class="adding">
+<h1>Register New Customer</h1>
+
+
+<form class="addCustomerForm" #addCustomerForm="ngForm" >
+
+    <input required ngModel #firstName="ngModel" [(ngModel)]="customer.firstName" type="text" name="firstName" placeholder="First Name">
+    <p [style.visibility]="firstName.errors?.['required'] ? 'visible' : 'hidden'">* First name is required</p>
+
+    <input required ngModel #lastName="ngModel" [(ngModel)]="customer.lastName" type="text" name="lastName" placeholder="Last Name">
+    <p [style.visibility]="lastName.errors?.['required'] ? 'visible' : 'hidden'">* Last name is required</p>
+
+    <input required ngModel #city="ngModel" [(ngModel)]="customer.city" type="text" name="city" placeholder="City">
+    <p [style.visibility]="city.errors?.['required'] ? 'visible' : 'hidden'">* City is required</p>
+
+    <input required minlength="3" ngModel #email="ngModel" [(ngModel)]="customer.email" type="email" name="email" placeholder="Email">
+    <p [style.visibility]="email.errors?.['required'] ? 'visible' : 'hidden'">* Email is required</p>
+
+    <button (click)="addCustomer()" [disabled]="!addCustomerForm.valid">Add</button>
+</form>
+
+
+
+<div class="errors">
+    <p>{{errorCode}} {{errorMessage}}</p>
+</div>
+</div>
+</div>
+<!-- 
+<form class="loginFormTwo" #loginFormTwo="ngForm" novalidate>
+    <mat-form-field>
+        <mat-label></mat-label>
+        <input  matInput type="email" name="email" 
+                ngModel #email="ngModel" required
+                placeholder="Sta kurac zvezda, alo">
+        <mat-error *ngIf="email.errors?.['required']">The name is required</mat-error>
+
+    </mat-form-field>
+</form> -->
+
+
+<!-- </form>
+  <div name="myForm">
+    <label for="firstName">First Name:</label>
+    <input name = "myInput" type = "text" id = "firstName" [(ngModel)]="user.firstName"/>
+    <br />
+    <label for = "lastName">Last Name:</label>
+    <input type = "text" id = "lastName" [(ngModel)]="user.lastName"/>
+    <br/>
+    <label for = "email">email:</label>
+    <input type = "text" id = "email" [(ngModel)]="user.email"/>
+    <br />
+    <label for = "password">Password:</label>
+    <input type = "text" id = "password" [(ngModel)] = "user.password"/>
+    <br />
+    <button class = "btn btn-primary" type = "button" (click) = "addUser()">Add User</button>
+</div>
+
+
+<h2>User Preview:</h2>
+<h3>First Name: {{user.firstName}}</h3>
+<h3>Last Name: {{user.lastName}}</h3>
+<h3>Email: {{user.email}}</h3> -->
+
+
+  <!--The whole content below can be removed with the new code.-->
+<!-- <div style="text-align:center">
+    <h1>
+      Welcome to {{title}}!!
+    </h1>
+    <form [formGroup]="angForm" novalidate>
+          <div class="form-group">
+            <label class="center-block">Name:
+              <input class="form-control" formControlName="name">
+            </label>
+          </div>
+          <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)" class="alert alert-danger">
+              <div *ngIf="angForm.controls['name'].errors">
+              Name is required.
+            </div>
+          </div>
+    </form>
+  <p>Form value: {{ angForm.value | json }}</p>
+  <p>Form status: {{ angForm.status | json }}</p>
+  </div> -->

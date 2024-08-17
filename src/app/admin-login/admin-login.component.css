@@ -1,0 +1,47 @@
+.cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #42855B;
+    min-height: 95vh;
+}
+
+form {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    margin: 10px;
+}
+
+button {
+    margin: 30px;
+    width: 50%;
+    padding: 12px 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: #f1c40f;
+    border: none;
+}
+
+button:hover {
+        background: #2c3e50;;
+        cursor: pointer;
+        transition: .3s ease;
+        color: white;
+    }
+
+.right {
+    margin: 30px;
+    width: 10%;
+    padding: 12px 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: #42855B;
+    border: none;
+    color: white;
+}

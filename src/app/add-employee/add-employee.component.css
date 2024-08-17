@@ -1,0 +1,72 @@
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../assets/IMG_6720.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 85vh;
+}
+
+.main-add {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../assets/IMG_6729.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 85vh;
+}
+
+.adding {
+    text-align: center;
+    background-color: rgba(241, 196, 15, 0.7);
+    width: 50%;
+    height: 40vh;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form p {
+    color: #F1502D;;
+    font-size: 0.7rem;
+    
+}
+
+h1 {
+    margin: 15px 0;
+}
+
+button {
+    padding: 0 10px;
+    margin: 10px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.errors {
+    text-align: center;
+    color: #F1502D;
+    margin: 10px;
+}
+

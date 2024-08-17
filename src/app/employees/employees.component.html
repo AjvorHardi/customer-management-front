@@ -1,0 +1,28 @@
+
+<app-navbar></app-navbar>
+<div class="main">
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Role</th>
+        </thead>
+
+        <tbody>
+            <tr class = "employee" *ngFor="let employee of employees">
+                <td>{{employee.id}}</td>
+                <td>{{employee.username}}</td>
+                <td>{{employee.password}}</td>
+                <td>{{employee.role}}</td>
+                <div class="btns">
+                    <button (click)="makeAdmin(employee.id)" >Make Admin</button>
+                    <button (click)="deleteEmployee(employee.id)" >Delete</button>
+                </div>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+<!-- <a role="button" (click)="getAllYourCustomers()">Your Customers</a> -->
+<app-footer></app-footer>
